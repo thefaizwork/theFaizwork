@@ -11,10 +11,10 @@ os.system('git config --global user.name "your-username"')
 os.system('git config --global user.email "your-email@example.com"')
 
 # Generate 1000 random past commit dates
-for i in range(1000):  # 1000 commits to fully greenify the GitHub graph
+for i in range(1000):  # Increase to 2000 if needed
     random_days_ago = random.randint(1, 365)  # Pick a random day in the past year
     commit_date = (datetime.now() - timedelta(days=random_days_ago)).strftime("%Y-%m-%d %H:%M:%S")
-    
+
     with open("commit.txt", "a") as f:
         f.write(f"Commit {i + 1} on {commit_date}\n")
 
